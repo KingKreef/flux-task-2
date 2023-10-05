@@ -4,12 +4,14 @@ import { validate } from "./utils";
 import { FormBuilder } from "./FormBuilder";
 import { personalFields, destinationFields, guestFields } from "./forms";
 import { Confirmation } from "./components/ConfirmationDetails";
+import { SuccessMessage } from "./components/SuccessMessage";
 
 
 export const TravelFormWrapper = () => {
   const [formData, setFormData] = useState({ children: 0, adults: 1 });
   const [step, setStep] = useState(1);
   const [errors, setErrors] = useState([]);
+  const [success, setSuccess] = useState(false)
 
   /**
    * Handles the state change for the form data
@@ -33,8 +35,7 @@ export const TravelFormWrapper = () => {
    */
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    alert("sadsad");
-    // Handle form submission here
+    setSuccess(true)
   };
 
   /**
@@ -60,6 +61,18 @@ export const TravelFormWrapper = () => {
     setErrors([]);
     setStep(step - 1);
   };
+
+  const reset = () => {
+    setErrors([]);
+    setStep(1);
+    setSuccess(false)
+    setFormData({ children: 0, adults: 1 })
+  };
+
+
+  if(success){
+    return <SuccessMessage reset={reset}/>
+  }
 
   return (
     <div className="contact-form-container">
@@ -206,6 +219,6 @@ const getStepComponent = (
 /**
  * TODO
  * mobile buttons styling
- * add some destinations
- * success massage
+ * add destinations
+ * style date picker inputs
  */
