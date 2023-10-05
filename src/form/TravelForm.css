@@ -31,15 +31,6 @@
   .field{
     padding: 10px
   }
-/*   
-  input,
-  select,
-  textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  } */
 
   .input-field{
     width: 100%;
@@ -111,24 +102,6 @@
   .checkbox-input {
     margin-right: 10px; /* Add margin between checkbox and label if needed */
   }
-
-  .details-container {
-    display: block; /* Set to 'block' for block-level container */
-  }
-  
-  .details-input{
-    display: inline-block; /* Make checkbox and label inline elements */
-    vertical-align: middle; /* Align them vertically in the middle */
- 
-    font-weight: bold;
-  }
-
-  .details-label {
-    display: inline-block; /* Make checkbox and label inline elements */
-    vertical-align: middle; /* Align them vertically in the middle */
-    margin-left: 20px;
-  }
-
 
   .row {
     display: flex;
