@@ -1,5 +1,6 @@
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import "../TravelForm.css"
 /**
  * Get form according to step
  *
@@ -23,7 +24,7 @@ export const DateRangePicker = ({ handleChange, startDate, endDate }: any) => {
         className="date-picker"
         style={{ display: "flex", justifyContent: "space-between" }}
       >
-        <div className="date-picker-input">
+        <div >
           <label>Start Date: </label>
           <DatePicker
             selected={startDate}
