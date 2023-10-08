@@ -1,154 +1,149 @@
 .contact-form-container {
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    width: 500px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  .contact-form-container h2 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .form-group {
-    margin-bottom: 20px;
-  }
-  
-  label {
-    display: block;
-    font-weight: bold;
-    text-align: left;
-    font-size: 13px;
-  }
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  width: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
 
-  .field{
-    padding: 10px
-  }
+.contact-form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
 
-  .input-field{
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  text-align: left;
+  font-size: 13px;
+}
+
+.field {
+  padding: 10px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.submit-button {
+  background-color: #00ffaa;
+  color: #7b7e7a;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #00ff2a;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.date-picker-input {
+  width: 100%; /* Make date pickers full width */
+  border: 1px solid #000000;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .contact-form-container {
     width: 100%;
+    height: 100%;
     padding: 10px;
+  }
+
+  .date-picker {
+    flex-direction: column; /* Stack date pickers vertically */
+  }
+
+  .react-datepicker__input-container input {
+    height: 40px;
     border: 1px solid #ccc;
     border-radius: 5px;
-  }
-  
-  button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-  }
-
-  .submit-button {
-    background-color: #00ffaa;
-    color: #7b7e7a;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-  }
-
-  .submit-button:hover {
-    background-color: #00ff2a;
-  }
-  
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-
-  .button-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-  }
-
-  .date-picker-input {
-    width: 100%; /* Make date pickers full width */
-    border: 1px solid #000000;
-    border-radius: 5px;
-  }
-  
-  @media (max-width: 768px) {
-    .contact-form-container {
-      width: 100%;
-      height: 100%;
-      padding: 10px;
-    }
-
-    .date-picker {
-      flex-direction: column; /* Stack date pickers vertically */
-    }
-
-    .react-datepicker__input-container input {
-      height: 40px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-     
   }
 
   .react-datepicker-wrapper,
   .react-datepicker__input-container,
   .react-datepicker__input-container input {
-      display: block;
-      width: 100%;
+    display: block;
+    width: 100%;
   }
+}
 
-  }
+.checkbox-container {
+  display: block; /* Set to 'block' for block-level container */
+  padding: 10px;
+}
 
-  .checkbox-container {
-    display: block; /* Set to 'block' for block-level container */
-    padding: 10px;
-  }
-  
-  .checkbox-input,
-  .checkbox-label {
-    display: inline-block; /* Make checkbox and label inline elements */
-    vertical-align: middle; /* Align them vertically in the middle */
-  }
-  
-  .checkbox-input {
-    margin-right: 10px; /* Add margin between checkbox and label if needed */
-  }
+.checkbox-input,
+.checkbox-label {
+  display: inline-block; /* Make checkbox and label inline elements */
+  vertical-align: middle; /* Align them vertically in the middle */
+}
 
-  .row {
-    display: flex;
-    align-items: center;
-    margin: 10px 0;
-  }
-  
-  .column {
-    padding: 10px;
-  }
-  
-  .label {
-    flex: 1; /* The label column takes up 1/2 of the available space */
-    text-align: left;
-    font-weight: bold;
-  }
-  
-  .value {
-    flex: 1; /* The value column takes up 1/2 of the available space */
-    text-align: left;
-  }
+.checkbox-input {
+  margin-right: 10px; /* Add margin between checkbox and label if needed */
+}
 
+.row {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
 
-  .react-datepicker__input-container input {
-      height: 40px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-  }
+.column {
+  padding: 10px;
+}
 
-  .date-picker {
-    display: flex;
-    justify-content: space-between; /* or other alignment options */
-  }
+.label {
+  flex: 1; /* The label column takes up 1/2 of the available space */
+  text-align: left;
+  font-weight: bold;
+}
+
+.value {
+  flex: 1; /* The value column takes up 1/2 of the available space */
+  text-align: left;
+}
+
+.react-datepicker__input-container input {
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.date-picker {
+  display: flex;
+  justify-content: space-between; /* or other alignment options */
+}
