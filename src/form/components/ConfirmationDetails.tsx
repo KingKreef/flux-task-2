@@ -37,6 +37,7 @@ export const Confirmation = ({ data }: any) => {
             const endDate = formatDate(data[entry]);
             return <ConfirmationEntry label="End Date:" value={endDate} />;
           }
+          return null
         }
       })}
     </div>
