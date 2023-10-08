@@ -1,4 +1,4 @@
-import { FIELD_TYPES } from "./constants";
+import { FIELD_TYPES } from "./utils/constants";
 import { DateRangePicker } from "./components/DateRangePicker";
 /**
  * Builds the form according to the input object

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import "./TravelForm.css";
-import { validate } from "./utils";
+import "./css/TravelForm.css";
+import { validate } from "./utils/utils";
 import { FormBuilder } from "./FormBuilder";
-import { personalFields, destinationFields, guestFields } from "./forms";
+import { personalFields, destinationFields, guestFields } from "./utils/forms";
 import { Confirmation } from "./components/ConfirmationDetails";
 import { SuccessMessage } from "./components/SuccessMessage";
 

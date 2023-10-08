@@ -1,6 +1,6 @@
-import { personalFields, destinationFields, guestFields } from "../forms";
-import { FIELD_TYPES } from "../constants";
-import { formatDate } from "../utils";
+import { personalFields, destinationFields, guestFields } from "../utils/forms";
+import { FIELD_TYPES } from "../utils/constants";
+import { formatDate } from "../utils/utils";
 import { ConfirmationEntry } from "./ConfirmationEntry";
 
 export const Confirmation = ({ data }: any) => {

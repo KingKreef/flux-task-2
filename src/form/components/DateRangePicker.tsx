@@ -1,7 +1,7 @@
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-import "../TravelForm.css";
+import "../css/TravelForm.css";
 
 /**
  * Get form according to step
