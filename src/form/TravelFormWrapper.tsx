@@ -8,7 +8,7 @@ import { SuccessMessage } from "./components/SuccessMessage";
 
 
 export const TravelFormWrapper = () => {
-  const [formData, setFormData] = useState({ children: 0, adults: 1 });
+  const [formData, setFormData] = useState({});
   const [step, setStep] = useState(1);
   const [errors, setErrors] = useState([]);
   const [success, setSuccess] = useState(false)
@@ -66,7 +66,7 @@ export const TravelFormWrapper = () => {
     setErrors([]);
     setStep(1);
     setSuccess(false)
-    setFormData({ children: 0, adults: 1 })
+    setFormData({})
   };
 
 

@@ -71,6 +71,12 @@
     align-items: center;
     padding: 10px;
   }
+
+  .date-picker-input {
+    width: 100%; /* Make date pickers full width */
+    border: 1px solid #000000;
+    border-radius: 5px;
+  }
   
   @media (max-width: 768px) {
     .contact-form-container {
@@ -83,11 +89,20 @@
       flex-direction: column; /* Stack date pickers vertically */
     }
 
-    .date-picker-input {
-      width: 100%; /* Make date pickers full width */
-      border: 1px solid #000000;
+    .react-datepicker__input-container input {
+      height: 40px;
+      border: 1px solid #ccc;
       border-radius: 5px;
-    }
+     
+  }
+
+  .react-datepicker-wrapper,
+  .react-datepicker__input-container,
+  .react-datepicker__input-container input {
+      display: block;
+      width: 100%;
+  }
+
   }
 
   .checkbox-container {
@@ -124,4 +139,16 @@
   .value {
     flex: 1; /* The value column takes up 1/2 of the available space */
     text-align: left;
+  }
+
+
+  .react-datepicker__input-container input {
+      height: 40px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+  }
+
+  .date-picker {
+    display: flex;
+    justify-content: space-between; /* or other alignment options */
   }

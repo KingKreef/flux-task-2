@@ -1,5 +1,8 @@
 import { personalFields, destinationFields, guestFields } from "../forms";
 import { FIELD_TYPES } from "../constants";
+import { formatDate } from "../utils";
+import { ConfirmationEntry } from "./ConfirmationEntry";
+
 export const Confirmation = ({ data }: any) => {
   const allFormFields = [
     ...personalFields,
@@ -14,21 +17,27 @@ export const Confirmation = ({ data }: any) => {
         if (field) {
           if (field.type === FIELD_TYPES.CHECKBOX) {
             return (
-              <div className="row">
-                <div className="column label">{field.label}:</div>
-                <div className="column value">{data[entry] ? "Yes" : "No"}</div>
-              </div>
+              <ConfirmationEntry
+                label={field.label}
+                value={data[entry] ? "Yes" : "No"}
+              />
             );
           } else {
             return (
-              <div className="row">
-                <div className="column label">{field.label}:</div>
-                <div className="column value">{data[entry]}</div>
-              </div>
+              <ConfirmationEntry label={field.label} value={data[entry]} />
             );
           }
+        } else {
+          if (entry === "startDate") {
+            const startDate = formatDate(data[entry]);
+            return <ConfirmationEntry label="Start Date:" value={startDate} />;
+          }
+
+          if (entry === "endDate") {
+            const endDate = formatDate(data[entry]);
+            return <ConfirmationEntry label="End Date:" value={endDate} />;
+          }
         }
-        return null;
       })}
     </div>
   );
